@@ -1,0 +1,11 @@
+version = 1
+
+[custom]
+
+enable_rule_generator = false
+overwrite_original_rules = false
+
+clash_rule_base = "https://raw.githubusercontent.com/KilluaAoki/Rule-Config/main/Clash_RuleProviders_Max/Base.yaml"
+
+[[custom_groups]]
+import = "https://raw.githubusercontent.com/KilluaAoki/Rule-Config/main/Clash_RuleProviders_Max/Groups.toml"
