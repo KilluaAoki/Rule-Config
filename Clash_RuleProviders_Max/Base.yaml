@@ -240,7 +240,7 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,Lan_CIDR,🌀 全球直连
+  - RULE-SET,Lan_CIDR,🌀 全球直连,no-resolve
   - RULE-SET,Applications,🌀 全球直连
   - RULE-SET,Private,🌀 全球直连
   - RULE-SET,Reject,📛 禁止通行
@@ -252,7 +252,7 @@ rules:
   - RULE-SET,Developer,🖥 Developer
   - RULE-SET,Github,🖥 Developer
   - RULE-SET,Jetbrains,🖥 Developer
-  - RULE-SET,Telegram_CIDR,💬 Telegram
+  - RULE-SET,Telegram_CIDR,💬 Telegram,no-resolve
   - RULE-SET,GoogleFCM,🇬 GoogleFCM
   - RULE-SET,Google,🇬 Google
   - RULE-SET,iCloud,☁️ iCloud
@@ -265,7 +265,7 @@ rules:
   - RULE-SET,ChinaMedia,🎥 国内媒体
   - RULE-SET,Proxy,🪀 节点选择
   - RULE-SET,Direct,🌀 全球直连
-  - RULE-SET,CN_CIDR,🌀 全球直连
+  - RULE-SET,CN_CIDR,🌀 全球直连,no-resolve
   - GEOIP,LAN,🌀 全球直连,no-resolve
   - GEOIP,CN,🌀 全球直连,no-resolve
   - MATCH,🐟 漏网之鱼
