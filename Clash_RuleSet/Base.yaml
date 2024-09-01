@@ -1,13 +1,15 @@
 mode: rule
 log-level: info
-port: 7899
-socks-port: 7898
-mixed-port: 7897
+mixed-port: 7890
 allow-lan: true
 bind-address: "*"
 ipv6: true
 unified-delay: true
+tcp-concurrent: true
 external-controller: "127.0.0.1:9097"
+
+profile:
+  store-selected: true
 
 geodata-mode: true
 geo-auto-update: true
@@ -15,42 +17,37 @@ geo-update-interval: 24
 geox-url:
   geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
   geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
-  mmdb: "https://cdn.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb"
-  asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-asn.mmdb"
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+  asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 
 dns:
   enable: true
   ipv6: true
+  prefer-h3: true
+  use-hosts: false
+  use-system-hosts: true
   default-nameserver:
     - 119.29.29.29
     - 223.5.5.5
   nameserver:
-    - tls://1.12.12.12:853
-    - tls://223.6.6.6:853
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback:
     - tls://1.0.0.1:853
     - tls://8.8.4.4:853
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
-    - https://doh.dns.sb/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+  nameserver-policy:
+    "geosite:cn,private":
+      - tls://1.12.12.12:853
+      - tls://223.6.6.6:853
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
+    - "*"
     - "+.lan"
     - "+.local"
     - "+.msftncsi.com"
     - "+.msftconnecttest.com"
-    - "localhost.ptlogin2.qq.com"
-    - "localhost.sec.qq.com"
-    - "localhost.work.weixin.qq.com"
 
 proxies: ~
 
