@@ -187,18 +187,18 @@ rule-providers:
     path: ./ruleset/Game.yaml
     interval: 86400
 
-  GlobalMedia:
-    type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
-    path: ./ruleset/GlobalMedia.yaml
-    interval: 86400
-
   ChinaMedia:
     type: http
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia_No_Resolve.yaml"
     path: ./ruleset/ChinaMedia.yaml
+    interval: 86400
+
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
+    path: ./ruleset/GlobalMedia.yaml
     interval: 86400
 
 rules:
@@ -217,8 +217,8 @@ rules:
   - RULE-SET,OneDrive,🪟 OneDrive
   - RULE-SET,Microsoft,🪟 Microsoft
   - RULE-SET,Game,🎮 Game
-  - RULE-SET,GlobalMedia,🎥 国外媒体
   - RULE-SET,ChinaMedia,🎥 国内媒体
+  - RULE-SET,GlobalMedia,🎥 国外媒体
   - RULE-SET,Private,🌀 全球直连
   - RULE-SET,Reject,📛 禁止通行
   - RULE-SET,Proxy,🪀 节点选择
