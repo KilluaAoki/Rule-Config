@@ -96,6 +96,13 @@ rule-providers:
     path: ./ruleset/Applications.yaml
     interval: 86400
 
+  LAN_CIDR:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/LAN_CIDR.yaml
+    interval: 86400
+
   OpenAI:
     type: http
     behavior: classical
@@ -203,6 +210,9 @@ rule-providers:
 
 rules:
   - RULE-SET,Applications,🌀 全球直连
+  - RULE-SET,LAN_CIDR,🌀 全球直连
+  - RULE-SET,Private,🌀 全球直连
+  - RULE-SET,Reject,📛 禁止通行
   - RULE-SET,OpenAI,🌑 AI
   - RULE-SET,Claude,🌑 AI
   - RULE-SET,Bing,🌑 AI
@@ -219,10 +229,7 @@ rules:
   - RULE-SET,Game,🎮 Game
   - RULE-SET,ChinaMedia,🎥 国内媒体
   - RULE-SET,GlobalMedia,🎥 国外媒体
-  - RULE-SET,Private,🌀 全球直连
-  - RULE-SET,Reject,📛 禁止通行
   - RULE-SET,Proxy,🪀 节点选择
   - RULE-SET,Direct,🌀 全球直连
-  - GEOIP,LAN,🌀 全球直连
   - GEOIP,CN,🌀 全球直连
   - MATCH,🐟 漏网之鱼
