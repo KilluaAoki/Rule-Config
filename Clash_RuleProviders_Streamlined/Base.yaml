@@ -205,4 +205,4 @@ rules:
   - RULE-SET,Proxy,🪀 Proxy
   - RULE-SET,Direct,🌀 Direct
   - GEOIP,CN,🌀 Direct
-  - MATCH,🐟 漏网之鱼
+  - MATCH,🐟 Unmatched
