@@ -1,0 +1,221 @@
+[[custom_groups]]
+name = "🪀 Proxy"
+type = "select"
+rule = [
+	"[]💤 Auto",
+	"[]🖐 Manual",
+	"[]🔮 Loadbalancer",
+	"[]⚙️ Fallback",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "💤 Auto"
+type = "url-test"
+rule = [
+	"(^(?!.*(((?<![^\\s\\-_\\(])Home(?![^\\s\\-_\\)]))|(\\(?((x|X)?(\\d+)(\\.?\\d+)?)(x|X)\\)?))).*)",
+]
+url = "https://www.gstatic.com/generate_204"
+interval = 3600
+
+[[custom_groups]]
+name = "🖐 Manual"
+type = "select"
+rule = [".*"]
+
+[[custom_groups]]
+name = "🏠 Home"
+type = "select"
+rule = ["(?<![^\\s\\-_\\(])Home(?![^\\s\\-_\\)])"]
+
+[[custom_groups]]
+name = "🌠 Multiplier"
+type = "select"
+rule = ["\\(?((x|X)?(\\d+)(\\.?\\d+)?)(x|X)\\)?"]
+
+[[custom_groups]]
+name = "🌑 AI"
+type = "select"
+rule = [
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🖥 Developer"
+type = "select"
+rule = [
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "💬 Telegram"
+type = "select"
+rule = [
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🇬 Google"
+type = "select"
+rule = [
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🪟 Microsoft"
+type = "select"
+rule = [
+	"[]🌀 Direct",
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🎮 Game"
+type = "select"
+rule = [
+	"[]🌀 Direct",
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🎥 Media"
+type = "select"
+rule = [
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🇭🇰 HongKong"
+type = "select"
+rule = [
+	"(?i:\\bHK[G]?\\b|Hong.*?Kong|\\bHKT\\b|\\bHKBN\\b|\\bHGC\\b|\\bWTT\\b|\\bCMI\\b|香港)",
+]
+
+[[custom_groups]]
+name = "🇸🇬 Singapore"
+type = "select"
+rule = ["(?i:\\bSG[P]?\\b|Singapore|新加坡|狮城)"]
+
+[[custom_groups]]
+name = "🇺🇸 UnitedStates"
+type = "select"
+rule = [
+	"(?i:\\bUS[A]?\\b|America|United.*?States|LA|美国|美利坚|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)",
+]
+
+[[custom_groups]]
+name = "🇯🇵 Japan"
+type = "select"
+rule = ["(?i:\\bJP[N]?\\b|Japan|Tokyo|Osaka|Saitama|日本|东京|大阪|埼玉)"]
+
+[[custom_groups]]
+name = "🏳️‍⚧️ Other"
+type = "select"
+rule = ["(^(?!.*(🇭🇰|🇸🇬|🇺🇸|🇯🇵)).*)"]
+
+[[custom_groups]]
+name = "🌀 Direct"
+type = "select"
+rule = [
+	"[]DIRECT",
+	"(?i:\\bC[H]?N\\b|China|Back|回国|Beijing|Shanghai|Guangzhou|Shenzhen|Hangzhou|Changzhou|Xuzhou|Qingdao|Ningbo|Zhenjiang|Chengdu|Hebei|Shanxi|Liaoning|Jilin|Heilongjiang|Jiangsu|Zhejiang|Anhui|Fujian|Jiangxi|Shandong|Henan|Hubei|Hunan|Guangdong|Hainan|Sichuan|Guizhou|Yunnan|Shaanxi|Gansu|Qinghai|Neimenggu|Guangxi|Xizang|Ningxia|Xinjiang|中国|北京|上海|广州|深圳|杭州|常州|徐州|青岛|宁波|镇江|成都|河北|山西|辽宁|吉林|黑龙江|江苏|浙江|安徽|福建|江西|山东|河南|湖北|湖南|广东|海南|四川|贵州|云南|陕西|甘肃|青海|内蒙古|广西|西藏|宁夏|新疆)",
+]
+
+[[custom_groups]]
+name = "🐟 Unmatched"
+type = "select"
+rule = [
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🌀 Direct",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
+name = "🔮 Loadbalancer"
+type = "load-balance"
+rule = [".*"]
+url = "https://www.gstatic.com/generate_204"
+interval = 3600
+strategy = "consistent-hashing"
+
+[[custom_groups]]
+name = "⚙️ Fallback"
+type = "fallback"
+rule = [".*"]
+url = "https://www.gstatic.com/generate_204"
+interval = 3600
