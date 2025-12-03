@@ -168,7 +168,7 @@ rule = ["(?i:\\bSG[P]?\\b|Singapore|新加坡|狮城)"]
 name = "🇺🇸 UnitedStates"
 type = "select"
 rule = [
-	"(?i:\\bUS[A]?\\b|America|United.*?States|LA|Los|美国|美利坚|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)",
+	"(?i:\\bUS[A]?\\b|America|United.*?States|LA|Los|HI)",
 ]
 
 [[custom_groups]]
