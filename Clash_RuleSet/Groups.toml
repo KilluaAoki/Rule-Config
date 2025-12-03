@@ -258,7 +258,7 @@ rule = ["(?i:\\bSG[P]?\\b|Singapore|新加坡|狮城)"]
 [[custom_groups]]
 name = "🇺🇸 美国节点"
 type = "select"
-rule = ["(?i:\\bUS[A]?\\b|America|United.*?States|LA|Los|HI|Hawaii)"]
+rule = ["(?i:\\bUS[A]?\\b|America|United.*?States|LA|Los|H(?:awai)?i)"]
 
 [[custom_groups]]
 name = "🇬🇧 英国节点"
