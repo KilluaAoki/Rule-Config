@@ -193,6 +193,7 @@ rule-providers:
     interval: 86400
 
 rules:
+  - PROCESS-NAME,Proxifier.exe,🇨🇳 China
   - RULE-SET,Applications,🌀 Direct
   - RULE-SET,LAN_CIDR,🌀 Direct
   - RULE-SET,Private,🌀 Direct
