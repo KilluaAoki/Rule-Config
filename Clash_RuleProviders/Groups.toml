@@ -23,7 +23,7 @@ rule = [
 name = "💤 自动选择"
 type = "url-test"
 rule = [
-	"(^(?!.*(((?<![^\\s\\-_\\(])Home(?![^\\s\\-_\\)]))|(\\(?((x|X)?(\\d+)(\\.?\\d+)?)(x|X)\\)?))).*)",
+	"(^(?!.*(?:(?<![^\\s\\-_\\(])(?:Home|home|家庭?宽?带?)(?![^\\s\\-_\\)])|(?i:(?<![a-z0-9.])(?:\\d+(?:\\.\\d+)?\\s?(?:x|×|倍率?)|(?:x|×)\\s?\\d+(?:\\.\\d+)?)(?![a-z])))).*)",
 ]
 url = "https://www.gstatic.com/generate_204"
 interval = 3600
@@ -36,12 +36,12 @@ rule = [".*"]
 [[custom_groups]]
 name = "🏠 家宽节点"
 type = "select"
-rule = ["(?<![^\\s\\-_\\(])Home(?![^\\s\\-_\\)])"]
+rule = ["(?<![^\\s\\-_\\(])(?:Home|home|家庭?宽?带?)(?![^\\s\\-_\\)])"]
 
 [[custom_groups]]
 name = "🌠 倍率节点"
 type = "select"
-rule = ["\\(?((x|X)?(\\d+)(\\.?\\d+)?)(x|X)\\)?"]
+rule = ["(?i:(?<![a-z0-9.])(?:\\d+(?:\\.\\d+)?\\s?(?:x|×|倍率?)|(?:x|×)\\s?\\d+(?:\\.\\d+)?)(?![a-z]))"]
 
 [[custom_groups]]
 name = "🌑 AI"
@@ -242,38 +242,38 @@ rule = ["[]REJECT", "[]🌀 全球直连"]
 name = "🇭🇰 香港节点"
 type = "select"
 rule = [
-	"(?i:\\bHK[G]?\\b|Hong.*?Kong|\\bHKT\\b|\\bHKBN\\b|\\bHGC\\b|\\bWTT\\b|\\bCMI\\b|香港)",
+	"(?i:(?<![a-z0-9])HK[G]?(?![a-z])|Hong.*?Kong|\\bHKT\\b|\\bHKBN\\b|\\bHGC\\b|\\bWTT\\b|\\bCMI\\b|香港)",
 ]
 
 [[custom_groups]]
 name = "🇹🇼 台湾节点"
 type = "select"
-rule = ["(?i:\\bTW[N]?\\b|Taiwan|新北|彰化|\\bCHT\\b|\\bHINET\\b|台湾)"]
+rule = ["(?i:(?<![a-z0-9])TW[N]?(?![a-z])|Taiwan|新北|彰化|\\bCHT\\b|\\bHINET\\b|台湾|台灣|台北)"]
 
 [[custom_groups]]
 name = "🇸🇬 狮城节点"
 type = "select"
-rule = ["(?i:\\bSG[P]?\\b|Singapore|新加坡|狮城)"]
+rule = ["(?i:(?<![a-z0-9])SG[P]?(?![a-z])|Singapore|新加坡|狮城|獅城)"]
 
 [[custom_groups]]
 name = "🇺🇸 美国节点"
 type = "select"
-rule = ["(?i:\\bUS[A]?\\b|America|United.*?States|LA|Los|H(?:awai)?i)"]
+rule = ["(?i:(?<![a-z0-9])US[A]?(?![a-z])|America|United.*?States|(?<![a-z0-9])LAX?(?![a-z])|Los.*?Angeles|San.*?Jose|Silicon.*?Valley|Seattle|Chicago|Dallas|New.*?York|Las.*?Vegas|Hawaii|美国|美國|美利坚|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|夏威夷)"]
 
 [[custom_groups]]
 name = "🇬🇧 英国节点"
 type = "select"
-rule = ["(?i:\\bUK\\b|\\bGB[R]?\\b|England|United.*?Kingdom|London|英国|伦敦)"]
+rule = ["(?i:(?<![a-z0-9])(?:UK|GB[R]?)(?![a-z])|England|United.*?Kingdom|London|英国|英國|伦敦)"]
 
 [[custom_groups]]
 name = "🇰🇷 韩国节点"
 type = "select"
-rule = ["(?i:\\bK[O]?R\\b|Korea|首尔|韩|韓|韩国)"]
+rule = ["(?i:(?<![a-z0-9])K[O]?R(?![a-z])|Korea|Seoul|首尔|韩|韓|韩国)"]
 
 [[custom_groups]]
 name = "🇯🇵 日本节点"
 type = "select"
-rule = ["(?i:\\bJP[N]?\\b|Japan|Tokyo|Osaka|Saitama|日本|东京|大阪|埼玉)"]
+rule = ["(?i:(?<![a-z0-9])JP[N]?(?![a-z])|Japan|Tokyo|Osaka|Saitama|日本|东京|東京|大阪|埼玉)"]
 
 [[custom_groups]]
 name = "🏳️‍⚧️ 冷门节点"
