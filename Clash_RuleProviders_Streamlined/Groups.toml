@@ -121,6 +121,22 @@ rule = [
 ]
 
 [[custom_groups]]
+name = "📱 Apple"
+type = "select"
+rule = [
+	"[]🌀 Direct",
+	"[]🪀 Proxy",
+	"[]🖐 Manual",
+	"[]🏠 Home",
+	"[]🌠 Multiplier",
+	"[]🇭🇰 HongKong",
+	"[]🇸🇬 Singapore",
+	"[]🇺🇸 UnitedStates",
+	"[]🇯🇵 Japan",
+	"[]🏳️‍⚧️ Other",
+]
+
+[[custom_groups]]
 name = "🎮 Game"
 type = "select"
 rule = [

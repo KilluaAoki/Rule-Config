@@ -80,8 +80,9 @@ rule-providers:
   Reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/Reject.yaml
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs"
+    path: ./ruleset/Reject.mrs
     interval: 86400
 
   Private:
@@ -91,13 +92,6 @@ rule-providers:
     path: ./ruleset/Private.yaml
     interval: 86400
 
-  Telegram_CIDR:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/Telegram_CIDR.yaml
-    interval: 86400
-
   Applications:
     type: http
     behavior: classical
@@ -105,74 +99,60 @@ rule-providers:
     path: ./ruleset/Applications.yaml
     interval: 86400
 
-  LAN_CIDR:
+  AI:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./ruleset/LAN_CIDR.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs"
+    path: ./ruleset/AI.mrs
     interval: 86400
 
-  GlobalAI:
+  Apple_CN:
     type: http
-    behavior: classical
-    url: "https://magicrule.pages.dev/data/_shared/artifacts/GlobalAI_classical_53616f647b807ae2.yaml"
-    path: ./ruleset/GlobalAI.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple@cn.mrs"
+    path: ./ruleset/Apple_CN.mrs
     interval: 86400
 
-  Jetbrains:
+  Apple:
     type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Jetbrains/Jetbrains_No_Resolve.yaml"
-    path: ./ruleset/Jetbrains.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
+    path: ./ruleset/Apple.mrs
     interval: 86400
 
   Developer:
     type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Developer/Developer_No_Resolve.yaml"
-    path: ./ruleset/Developer.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-dev.mrs"
+    path: ./ruleset/Developer.mrs
     interval: 86400
 
-  Github:
+  Telegram:
     type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub_No_Resolve.yaml"
-    path: ./ruleset/Github.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs"
+    path: ./ruleset/Telegram.mrs
     interval: 86400
 
-  GoogleFCM:
+  Game_CN:
     type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleFCM/GoogleFCM_No_Resolve.yaml"
-    path: ./ruleset/GoogleFCM.yaml
-    interval: 86400
-
-  Google:
-    type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google_No_Resolve.yaml"
-    path: ./ruleset/Google.yaml
-    interval: 86400
-
-  OneDrive:
-    type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml"
-    path: ./ruleset/OneDrive.yaml
-    interval: 86400
-
-  Microsoft:
-    type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml"
-    path: ./ruleset/Microsoft.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs"
+    path: ./ruleset/Game_CN.mrs
     interval: 86400
 
   Game:
     type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game_No_Resolve.yaml"
-    path: ./ruleset/Game.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games-!cn.mrs"
+    path: ./ruleset/Game.mrs
     interval: 86400
 
   ChinaMedia:
@@ -184,29 +164,61 @@ rule-providers:
 
   GlobalMedia:
     type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
-    path: ./ruleset/GlobalMedia.yaml
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-entertainment.mrs"
+    path: ./ruleset/GlobalMedia.mrs
+    interval: 86400
+
+  Google:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
+    path: ./ruleset/Google.mrs
+    interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    path: ./ruleset/Microsoft.mrs
+    interval: 86400
+
+  LAN_CIDR:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/LAN_CIDR.yaml
+    interval: 86400
+
+  Telegram_CIDR:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
+    path: ./ruleset/Telegram_CIDR.mrs
     interval: 86400
 
 rules:
-  - RULE-SET,Applications,🌀 全球直连
-  - RULE-SET,LAN_CIDR,🌀 全球直连
   - RULE-SET,Private,🌀 全球直连
+  - RULE-SET,AI,🌑 AI
   - RULE-SET,Reject,📛 禁止通行
-  - RULE-SET,GlobalAI,🌑 AI
+  - RULE-SET,Apple_CN,🌀 全球直连
+  - RULE-SET,Apple,📱 Apple
   - RULE-SET,Developer,🖥 Developer
-  - RULE-SET,Jetbrains,🖥 Developer
-  - RULE-SET,Github,🖥 Developer
-  - RULE-SET,Telegram_CIDR,💬 Telegram,no-resolve
-  - RULE-SET,GoogleFCM,🇬 GoogleFCM
-  - RULE-SET,Google,🇬 Google
-  - RULE-SET,OneDrive,🪟 OneDrive
-  - RULE-SET,Microsoft,🪟 Microsoft
+  - RULE-SET,Telegram,💬 Telegram
+  - RULE-SET,Game_CN,🌀 全球直连
   - RULE-SET,Game,🎮 Game
-  - RULE-SET,ChinaMedia,🎥 国内媒体
   - RULE-SET,GlobalMedia,🎥 国外媒体
+  - RULE-SET,Google,🇬 Google
+  - RULE-SET,Microsoft,🪟 Microsoft
+  - RULE-SET,ChinaMedia,🎥 国内媒体
+  - RULE-SET,Applications,🌀 全球直连
   - RULE-SET,Proxy,🪀 节点选择
   - RULE-SET,Direct,🌀 全球直连
+  - RULE-SET,LAN_CIDR,🌀 全球直连,no-resolve
+  - RULE-SET,Telegram_CIDR,💬 Telegram,no-resolve
   - GEOIP,CN,🌀 全球直连
   - MATCH,🐟 漏网之鱼
